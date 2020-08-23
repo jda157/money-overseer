@@ -1,4 +1,4 @@
-module github.com/jda157/money-overseer
+module github.com/jda157/overseer
 
 go 1.15
 
