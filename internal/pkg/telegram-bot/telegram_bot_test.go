@@ -23,5 +23,16 @@ func TestTelegramBot_SetToken(t *testing.T) {
 	tb := NewTelegramBot()
 	tb.SetToken(token)
 
+	assert.Equal(t, token, tb.bot.Token)
+}
+
+func TestTelegramBot_GetToken(t *testing.T) {
+	t.Parallel()
+
+	token := "SomeTelegramToken"
+
+	tb := NewTelegramBot()
+	tb.bot.Token = token
+
 	assert.Equal(t, token, tb.GetToken())
 }
