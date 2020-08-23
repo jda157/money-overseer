@@ -1,0 +1,4 @@
+mode: set
+github.com/jda157/overseer/internal/pkg/telegram-bot/telegram_bot.go:9.36,14.2 1 1
+github.com/jda157/overseer/internal/pkg/telegram-bot/telegram_bot.go:15.47,17.2 1 1
+github.com/jda157/overseer/internal/pkg/telegram-bot/telegram_bot.go:19.42,21.2 1 1

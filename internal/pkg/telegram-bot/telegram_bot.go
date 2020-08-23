@@ -15,3 +15,7 @@ func NewTelegramBot() *TelegramBot {
 func (tb *TelegramBot) SetToken(token string) {
 	tb.bot.Token = token
 }
+
+func (tb *TelegramBot) GetToken() string {
+	return tb.bot.Token
+}

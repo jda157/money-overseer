@@ -6,9 +6,22 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func Test_NewTelegramBot(t *testing.T) {
-	tb := NewTelegramBot()
-	assert.NotNil(t, tb)
-	assert.NotNil(t, tb.bot)
+func TestNewTelegramBot(t *testing.T) {
+	t.Parallel()
 
+	tb := NewTelegramBot()
+	assert.NotNil(t, tb, "TelegramBot wasn't initiated.")
+	assert.NotNil(t, tb.bot, "bot field in TelegramBot wasn't initiated")
+
+}
+
+func TestTelegramBot_SetToken(t *testing.T) {
+	t.Parallel()
+
+	token := "someTelegramToken"
+
+	tb := NewTelegramBot()
+	tb.SetToken(token)
+
+	assert.Equal(t, token, tb.GetToken())
 }
