@@ -4,9 +4,14 @@ run:
 
 .PHONY: test-cover
 test-cover:
-	go test -coverprofile=coverage.out ./...
-	go tool cover -func=coverage.out
+	mkdir -p test
+	go test -coverprofile=test/coverage.out ./...
+	go tool cover -func=test/coverage.out
 
 .PHONY: test
 test:
 	go test ./...
+
+.PHONY: build
+build:
+	  go build -o bin/main ./cmd/overseer/main.go

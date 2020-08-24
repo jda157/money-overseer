@@ -10,8 +10,8 @@ func NewTelegramBot() *TelegramBot {
 	return &TelegramBot{
 		bot: &tgbotapi.BotAPI{},
 	}
-
 }
+
 func (tb *TelegramBot) SetToken(token string) {
 	tb.bot.Token = token
 }
