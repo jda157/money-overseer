@@ -6,8 +6,19 @@ import (
 	"io/ioutil"
 )
 
-type config struct {
+type telegram struct {
 	TelegramToken string `yaml:"telegram_token"`
+}
+
+type database struct {
+	Login    string
+	Password string
+	Port     string
+}
+
+type config struct {
+	Telegram telegram
+	Database database
 }
 
 func InitConfig(p string) (*config, error) {
@@ -21,5 +32,17 @@ func InitConfig(p string) (*config, error) {
 }
 
 func (c *config) GetTelegramToken() string {
-	return c.TelegramToken
+	return c.Telegram.TelegramToken
+}
+
+func (c *config) GetDatabaseLogin() string {
+	return c.Database.Login
+}
+
+func (c *config) GetDatabasePassword() string {
+	return c.Database.Password
+}
+
+func (c *config) GetDatabasePort() string {
+	return c.Database.Port
 }
