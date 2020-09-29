@@ -1,1 +1,8 @@
-telegram_token: "some token here"
+telegram:
+  telegram_token: "your_telegram_token"
+
+database:
+  address: "127.0.0.1"
+  login: "database_login"
+  password: "database_password"
+  port: "your_database_port"

@@ -12,6 +12,7 @@ type telegram struct {
 }
 
 type database struct {
+	Address  string `yaml:"address"`
 	Login    string `yaml:"login"`
 	Password string `yaml:"password"`
 	Port     string `yaml:"port"`
