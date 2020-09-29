@@ -2,8 +2,9 @@ package config
 
 import (
 	"fmt"
-	"gopkg.in/yaml.v3"
 	"io/ioutil"
+
+	"gopkg.in/yaml.v3"
 )
 
 type telegram struct {
@@ -11,9 +12,9 @@ type telegram struct {
 }
 
 type database struct {
-	Login    string
-	Password string
-	Port     string
+	Login    string `yaml:"login"`
+	Password string `yaml:"password"`
+	Port     string `yaml:"port"`
 }
 
 type config struct {
