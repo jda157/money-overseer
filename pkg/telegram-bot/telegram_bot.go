@@ -1,14 +1,16 @@
 package telegram_bot
 
-import tgbotapi "github.com/Syfaro/telegram-bot-api"
+import (
+	"github.com/go-telegram-bot-api/telegram-bot-api"
+)
 
 type TelegramBot struct {
 	bot *tgbotapi.BotAPI
 }
 
-func NewTelegramBot() *TelegramBot {
+func NewTelegramBot(api *tgbotapi.BotAPI) *TelegramBot {
 	return &TelegramBot{
-		bot: &tgbotapi.BotAPI{},
+		bot: api,
 	}
 
 }
